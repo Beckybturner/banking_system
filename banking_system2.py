@@ -2,7 +2,7 @@ import re
 # Below is a function which opens the 'login_credentials' txt file and pulls out the information to put into a dictionary
 def read_login_file():
     # read txt file
-    file = open(r"C:\Users\Becky\Documents\CoGrammar\myenv\Tasks\login_credentials.txt", "r")
+    file = open(r"login_credentials.txt", "r")
     # create the dictionary
     temp_dictionary = {}
     # for each line in the txt file, split by spaces, storing as a list
@@ -223,7 +223,7 @@ def change_login_credentials_file(temp_dictionary):
      # set the keys of the temp_dictionary as a list
     keys = list(temp_dictionary.keys())
     # open login_credentials.txt and delete existing info
-    file = open(r"C:\Users\Becky\Documents\CoGrammar\myenv\Tasks\login_credentials.txt", "r+")
+    file = open(r"login_credentials.txt", "r+")
     file.truncate(0)
     # loop through the number of keys, writing the info from the dictionary as a new line in the file
     for line in range(len(keys)):
